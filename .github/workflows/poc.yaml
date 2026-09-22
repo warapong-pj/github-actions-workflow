@@ -1,6 +1,18 @@
 name: poc-pipeline
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      name:
+        type: string
+        required: true
+        description: service name
+        default: name
+      version:
+        type: string
+        required: true
+        description: service version
+        default: version
 
 jobs:
   example:
