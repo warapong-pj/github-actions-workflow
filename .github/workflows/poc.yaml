@@ -20,3 +20,5 @@ jobs:
     steps:
       - run: |
           echo "hello, world"
+          echo ${{ inputs.name }}
+          echo ${{ inputs.version }}
