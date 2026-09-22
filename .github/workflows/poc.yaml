@@ -3,6 +3,11 @@ name: poc-pipeline
 on: 
   workflow_dispatch:
     inputs:
+      ticket:
+        type: string
+        required: true
+        description: ticket id
+        default: ticket
       name:
         type: string
         required: true
@@ -20,5 +25,6 @@ jobs:
     steps:
       - run: |
           echo "hello, world"
+          echo ${{ inputs.ticket }}
           echo ${{ inputs.name }}
           echo ${{ inputs.version }}
