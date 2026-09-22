@@ -1,0 +1,10 @@
+name: poc-pipeline
+
+on: workflow_dispatch
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "hello, world"
